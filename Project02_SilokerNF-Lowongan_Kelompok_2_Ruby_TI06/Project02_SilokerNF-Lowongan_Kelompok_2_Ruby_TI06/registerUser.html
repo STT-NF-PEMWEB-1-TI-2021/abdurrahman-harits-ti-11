@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SILOKERNF-LOWONGAN</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <!--font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+
+    <!--icon bar address-->
+  <link rel="shortcut icon" href="dist/img/iconn.png">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="navbar.css" rel="stylesheet">
+
+    <!--icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css" integrity="sha512-1fPmaHba3v4A7PaUsComSM4TBsrrRGs+/fv0vrzafQ+Rw+siILTiJa0NtFfvGeyY5E182SDTaF5PqP+XOHgJag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <style>
+
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+
+        .form1 small {
+            color: red;
+        }
+
+        .footer {
+          bottom: 0;
+          width: 100%;
+          height: 60px; /* Set the fixed height of the footer here */
+          line-height: 60px;
+          background-color: #f5f5f5;
+        }
+      
+        .footer-bottom {
+          width: auto;
+          max-width: 680px;
+          padding: 0 15px;
+        }
+    </style>
+    <body>
+
+      <div class="container">
+        <div class="container-fluid">  
+            <div class="row justify-content-center">
+                <div class="col-md-7 col-lg-5">
+                  <div class="login-wrap p-4 p-md-5">
+                      <div class="d-flex">
+                        <div class="w-100">
+                            <h3 class="mb-4 text-center">Registrasi User</h3>
+                        </div>
+                      </div>
+                      <div class="p-5 border border-dark">
+                          <form id="form" onsubmit="checkInputs(event), login(event)">
+                            <div class="form1">
+                              <label>Nama Lengkap</label>
+                              <div class="input d-flex">
+                                <i class="fa fa-address-card"></i>
+                                <input type="text" class="form-control" id="namalengkap" onchange="checkInputs()" placeholder="Nama Lengkap">
+                                <br><br><small></small>
+                              </div>
+                            </div><br>
+                            <div class="form1">
+                              <label>Email</label>
+                              <div class="input d-flex">
+                                <i class="fa fa-envelope"></i>
+                                <input type="email" class="form-control" id="email" onchange="checkInputs()" placeholder="Email">
+                                <br><br><small></small>
+                              </div>
+                            </div><br>
+                            <div class="form1">
+                              <label>Username</label>
+                              <div class="input d-flex">
+                                <i class="fa fa-envelope"></i>
+                                <input type="text" class="form-control" id="username" onchange="checkInputs()" placeholder="Username">
+                                <br><br><small></small>
+                              </div>
+                            </div><br>
+                            <div class="form1">
+                              <label>Password</label>
+                              <div class="input d-flex">
+                                <i class="fa fa-lock"></i>
+                                <input type="password" class="form-control" id="password" onchange="checkInputs()" placeholder="Password">
+                                <br><br><small></small>
+                              </div>
+                            </div><br>
+                            <div class="form1">
+                              <label>Cek Password</label>
+                              <div class="input d-flex">
+                                <i class="fa fa-lock"></i>
+                                <input type="password" class="form-control" id="cekpassword" onchange="checkInputs()" placeholder="Cek Password">
+                                <br><br><small></small>
+                              </div>
+                            </div><br>
+                              <input type="submit" value="Daftar" class="btn btn-primary rounded submit justify-content-sm-end">
+                          </form>
+                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer-bottom">
+              <span class="text-muted text-white">&copy; Develop By Mahasiswa STT-NF 2021</span>
+        </div>
+      </footer>
+
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="dist/js/bootstrap.min.js"></script>
+      <script src="https://kit.fontawesome.com/206142bfe3.js" crossorigin="anonymous"></script>
+      <script src="dist/js/validation.js"></script>
+      <script src="dist/js/daftarotentika.js"></script>
+    </body>
+</html>

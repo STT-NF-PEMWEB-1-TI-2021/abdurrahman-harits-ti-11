@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SILOKERNF-LOWONGAN</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <!--font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+
+    <!--icon bar address-->
+  <link rel="shortcut icon" href="dist/img/iconn.png">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="navbar.css" rel="stylesheet">
+
+    <!--icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css" integrity="sha512-1fPmaHba3v4A7PaUsComSM4TBsrrRGs+/fv0vrzafQ+Rw+siILTiJa0NtFfvGeyY5E182SDTaF5PqP+XOHgJag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <style>
+
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+
+      small {
+            color: red;
+        }
+
+        .footer {
+          bottom: 0;
+          width: 100%;
+          height: 60px; /* Set the fixed height of the footer here */
+          line-height: 60px;
+          background-color: #f5f5f5;
+        }
+      
+        .footer-bottom {
+          width: auto;
+          max-width: 680px;
+          padding: 0 15px;
+        }
+    </style>
+
+      <div class="text-center">
+        <h3>SISTEM INFORMASI LOWONGAN KERJA NF - SILOKERNF</h3>
+      </div>
+
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand" href="landing_silokernf.html">SILOKERNF</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarsExample03">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="landing_silokernf.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lowongan_lokernf.html">Lowongan Baru</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="isi_lowongan_lokernf.html">Isi Loker</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="landing_silokernf.html">Berita</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-md-0">
+            <div class="input-group">  
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fa fa-search"></i>
+                </div>
+              </div> 
+              <input class="form-control fa-search" type="text" placeholder="Search">
+            </div>
+          </form>
+          <a class="btn btn-default btn-xs text-light border" href="login_user.html" type="submit" style="margin-left: 15px;">Login</a> 
+        </div>
+      </nav>
+      <br>
+
+      <div class="container">
+        <div class="container-fluid"> 
+          <div class="p-5 border border-dark">
+              <h5>Isi Penawaran Lowongan Kerja Anda</h5>
+              <ul class="navbar-nav navbar-expand-sm mr-auto justify-content-end">
+                <li class="nav-item"><a class="nav-link" href="landing_silokernf.html">Home > </a></li>
+                <li class="nav-item"><a class="nav-link" href="isi_lowongan_lokernf.html" style="color: black; list-style:none; text-decoration:none;"> Isi Loker </a></li>
+              </ul>                    
+              <div class="p-5 border border-dark">
+                <form id="form" onsubmit="checkInputs(event)">
+                  <div class="form1">
+                    <label>Nama Perusahaan/Organisasi</label>
+                    <div class="input d-flex">
+                      <i class="fa fa-building w-auto m-sm-auto"></i>
+                      <input type="text" class="form-control" id="namaperusahaan"  onchange="checkInputs()" placeholder="Nama Perusahaan">
+                      <br><br><small></small>
+                    </div>
+                  </div><br>
+                  <div class="form1">
+                    <label>Bidang Usaha</label>
+                    <div class="input d-flex">
+                      <i class="fa fa-th-list w-auto m-sm-auto"></i>
+                      <select class="form-control form-control-sm" id="perbankan"  onchange="checkInputs()">
+                        <option>Perbankan</option>
+                      </select>
+                      <br><small></small>
+                    </div>
+                  </div><br>
+                  <div class="form1">
+                    <label>Deskripsi Lowongan</label>
+                    <div class="input d-flex">
+                      <i class="fa fa-file-text w-auto m-sm-auto"></i>
+                      <textarea class="form-control" id="deskripsiloker" rows="3"  onchange="checkInputs()" placeholder="Deskripsi Lowongan"></textarea>
+                      <br><small></small>
+                    </div>
+                  </div><br>
+                  <div class="form1">
+                    <label>Deskripsi Kualifikasi Lowongan</label>
+                    <div class="input d-flex">
+                      <i class="fa fa-file-text w-auto m-sm-auto"></i>  
+                      <textarea class="form-control" id="kualifikasiloker" rows="3" onchange="checkInputs()" placeholder="Deskripsi Kualifikasi Lowongan"></textarea>
+                      <br><small></small>
+                    </div>
+                  </div><br>
+                  <div class="form1">
+                    <label>Kategori Lowongan</label>
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                      <input type="checkbox" id="kategorilowongan" onchange="checkInputs()">
+                      <label>Programmer</label>
+                    </div>
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                      <input type="checkbox" id="kategorilowongan" onchange="checkInputs()">
+                      <label>Network & Insfrastructure</label>
+                    </div>
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                      <input type="checkbox" id="kategorilowongan" onchange="checkInputs()">
+                      <label>Analyst</label>
+                    </div>
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                      <input type="checkbox" id="kategorilowongan" onchange="checkInputs()">
+                      <label>Data science</label>
+                    </div>
+                    <small></small>
+                  </div>
+                  <div class="form1">
+                    <label>Tanggal Dateline</label>
+                    <div class="input-group-prepend">
+                      <div class="input">
+                        <input type="date" id="tanggal" onchange="checkInputs()">
+                        <br><small></small>
+                      </div>
+                    </div>
+                 </div><br>
+                 <div class="form1">
+                  <label>Kontak Person</label>
+                  <div class="input d-flex">
+                    <i class="fa fa-address-card"></i>
+                    <input type="text" class="form-control" id="kontakperson"  onchange="checkInputs()" placeholder="Kontak Person">
+                    <br><br><small></small>
+                  </div>
+                </div><br>
+                <div class="form1">
+                  <label>Email</label>
+                  <div class="input d-flex">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" class="form-control" id="email"  onchange="checkInputs()" placeholder="email">
+                    <br><br><small></small>
+                  </div>
+                </div><br>
+                  <input type="submit" value="submit" class="btn btn-primary">
+                  <input type="reset" value="reset" class="btn btn-primary">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      <footer class="footer">
+        <div class="footer-bottom">
+              <span class="text-muted text-white">&copy; Develop By Mahasiswa STT-NF 2021</span>
+        </div>
+      </footer>
+
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="dist/js/bootstrap.min.js"></script>
+      <script src="https://kit.fontawesome.com/206142bfe3.js" crossorigin="anonymous"></script>
+      <script src="dist/js/validationisiloker.js"></script>
+    </body>
+</html>
